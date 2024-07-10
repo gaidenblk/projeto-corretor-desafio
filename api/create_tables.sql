@@ -1,0 +1,20 @@
+CREATE TABLE admins (
+  id SERIAL PRIMARY KEY,
+  token VARCHAR(255) NOT NULL UNIQUE,
+  name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE correctors (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE corrections (
+  id SERIAL PRIMARY KEY,
+  "correctorId" INT NOT NULL,
+  class VARCHAR(255) NOT NULL,
+  module VARCHAR(255) NOT NULL,
+  meeting VARCHAR(255) NOT NULL,
+  student VARCHAR(255) NOT NULL,
+  FOREIGN KEY ("correctorId") REFERENCES correctors(id) ON DELETE CASCADE
+);

@@ -2,7 +2,7 @@
 
 Projeto feito com React + backend typescript/postgresql
 
-![CorreThor](image.png)
+![CorreThor](./client/public/image.png)
 
 # Projeto CorreThor
 
@@ -139,6 +139,7 @@ npm install
 ```
 
 3. Configure o arquivo `.env` com as informações do seu banco de dados.
+
 4. Crie as tabelas no banco de dados utilizando o arquivo `create_tables.sql`:
 
 ```bash
@@ -151,13 +152,15 @@ psql -U <seu-usuario> -d <seu-banco> -f create_tables.sql
 psql -U <seu-usuario> -d <seu-banco> -f populate_tables.sql
 ```
 
-6. Inicie o servidor:
+6. Inicie o servidor backend:
 
 ```bash
 npm run start
 ```
 
 ### Frontend
+
+> Se você seguiu os procedimentos até aqui, percebeu que o seu terminal está travado, pois ele está executando o servidor backend... Então você precisará abrir outro terminal para continuar os procedimentos a partir daqui...
 
 1. Navegue até a pasta `client`:
 
@@ -171,10 +174,18 @@ cd projeto/client
 npm install
 ```
 
-3. Inicie o servidor de desenvolvimento:
+3. Inicie o servidor da aplicação:
 
 ```bash
 npm start
+```
+
+Pronto, aguarde alguns instantes a aplicação irá abrir uma janela do seu navegador direto na aplicação!
+
+Para acessar você precisará informar um token de acesso: Aqui está um que já foi populado no seu banco de dados, caso tenha seguido os procedimentos corretamente até aqui:
+
+```
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiVml0b3IgQXJydWRhIn0.nS8hPbA12kO7D_fnifaPsrr0zR95mWWMjjsiAKoDlX4
 ```
 
 > 🚧 Projeto em construção 🚧
